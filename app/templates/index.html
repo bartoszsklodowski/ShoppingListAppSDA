@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Lista Produktów</h2>
+    <ul>
+        {% for product in products %}
+            <li>
+                {{ product.name }} - Ilość: {{ product.quantity }}
+                {% if product.purchased %}
+                    - Kupiono
+                {% else %}
+                    - Nie kupiono
+                {% endif %}
+                <a href="{{ url_for('main.toggle_purchase', product_id=product._id) }}">Zmień status</a>
+                <a href="{{ url_for('main.edit_product', product_id=product._id) }}">Edytuj</a>
+                <a href="{{ url_for('main.delete_product', product_id=product._id) }}">Usuń</a>
+            </li>
+        {% endfor %}
+    </ul>
+
+    <a href="{{ url_for('main.add_product') }}">Dodaj Produkt</a>
+{% endblock %}

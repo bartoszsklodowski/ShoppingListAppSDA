@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Edytuj Produkt</h2>
+    <form method="post" action="{{ url_for('main.edit_product', product_id=product_id) }}">
+        {{ form.hidden_tag() }}
+        <label for="name">Nazwa Produktu:</label>
+        {{ form.name }}
+        <label for="quantity">Ilość:</label>
+        {{ form.quantity }}
+        <label for="purchased">Kupiono:</label>
+        {{ form.purchased }}
+        <input type="submit" value="Zapisz zmiany">
+    </form>
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Usunąć Produkt?</h2>
+    <form method="post" action="{{ url_for('main.delete_product', product_id=product_id) }}">
+        <p>Czy na pewno chcesz usunąć ten produkt?</p>
+        <button type="submit">Tak, usuń</button>
+        <a href="{{ url_for('main.index') }}">Nie, wróć do listy</a>
+    </form>
+{% endblock %}
