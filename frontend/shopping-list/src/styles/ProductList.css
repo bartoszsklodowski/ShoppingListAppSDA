@@ -1,0 +1,17 @@
+.product-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    gap: 2px; 
+    align-items: center; 
+    margin-bottom: 2px; 
+  }
+  
+  .product-item span, .product-item button {
+    margin: 2px;
+    padding: 2px; 
+  }
+  
+  .products-container {
+    max-width: 800px; 
+    margin: 0 auto; 
+  }
