@@ -40,8 +40,9 @@ function EditProductForm({ editProduct }) {
   };
 
   return (
-    <div>
+    <div className="edit-container">
       <h2>Edytuj Produkt</h2>
+      <div className="product-edit">
       <form onSubmit={handleSubmit}>
         <label htmlFor="name">Nazwa Produktu:</label>
         <input
@@ -69,6 +70,7 @@ function EditProductForm({ editProduct }) {
 
         <button type="submit">Zapisz Zmiany</button>
       </form>
+      </div>
       <Link to="/">
         <button>Strona główna</button>
       </Link>

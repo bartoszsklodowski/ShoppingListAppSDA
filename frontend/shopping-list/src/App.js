@@ -125,12 +125,14 @@ function App() {
   return (
     <Router>
       <div className="App">
+        <div className="content-container">
       <Header /> {Header}
         <Routes>
           <Route path="/" element={<ProductListWithFunctions />} />
           <Route path="/add" element={<AddProductFormWithFunctions />} />
           <Route path="/edit/:productId" element={<EditProductFormWithFunctions />} />
         </Routes>
+        </div>
         <Footer /> {Footer}
       </div>
     </Router>
